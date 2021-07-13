@@ -1,13 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { TopBar } from './components/Topbar/topbar';
+import { Home } from './components/Home/home';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <View style={{ flex:1 }}>
+        <TopBar />
+        <Home />
+      </View>
+    </SafeAreaProvider>
   );
 }
 
